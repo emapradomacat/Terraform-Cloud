@@ -13,7 +13,9 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region     = "us-east-1"
+  access_key = var.access_key
+  secret_key = var.secret_key
   assume_role {
     role_arn     = "arn:aws:iam::189494931186:role/Sandbox_AdministratorAccess_Role"
     session_name = "Sandbox"
